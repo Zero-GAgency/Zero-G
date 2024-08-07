@@ -1,0 +1,5 @@
+files:
+  - name: sdxl.vae.safetensors
+    url: https://huggingface.co/madebyollin/sdxl-vae-fp16-fix/resolve/main/sdxl.vae.safetensors
+  - name: llama-2-13b-chat.Q2_K.gguf
+    url: https://huggingface.co/TheBloke/Llama-2-13B-chat-GGUF/resolve/main/llama-2-13b-chat.Q2_K.gguf
