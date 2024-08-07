@@ -42,57 +42,6 @@ gantt
     Stable Release            :2024-11-01, 30d
 ```
 
-<style>
-  .mission-control, .community {
-    margin: 20px 0;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  .mission-control h2, .community h2 {
-    background-color: #2C3E50;
-    color: white;
-    padding: 10px;
-    margin: 0;
-  }
-  table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  th, td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-  }
-  tr:nth-child(even) {
-    background-color: #f2f2f2;
-  }
-  .license {
-    background-color: #ECF0F1;
-    padding: 15px;
-    border-radius: 8px;
-    margin-top: 20px;
-  }
-</style>
-
-<div class="mission-control">
-  <h2>🌍 Mission Control</h2>
-  <table>
-    <tr>
-      <th>🇧🇩 Base</th>
-      <th>🌐 Website</th>
-      <th>📧 Comms</th>
-      <th>📡 Telegram</th>
-    </tr>
-    <tr>
-      <td>Bangladesh</td>
-      <td><a href="https://zero-g.agency">zero-g.agency</a></td>
-      <td><a href="mailto:support@zero-g.city">support@zero-g.city</a></td>
-      <td><a href="https://t.me/ZeroGAgency">@ZeroGAgency</a></td>
-    </tr>
-  </table>
-</div>
-
 <div class="community">
   <h2>🤝 Join the Zero-G Community</h2>
   <table>
