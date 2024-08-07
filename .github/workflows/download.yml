@@ -1,5 +1,32 @@
-files:
-  - name: sdxl.vae.safetensors
-    url: https://huggingface.co/madebyollin/sdxl-vae-fp16-fix/resolve/main/sdxl.vae.safetensors
-  - name: llama-2-13b-chat.Q2_K.gguf
-    url: https://huggingface.co/TheBloke/Llama-2-13B-chat-GGUF/resolve/main/llama-2-13b-chat.Q2_K.gguf
+name: Download Files
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  download:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Install dependencies
+      run: sudo apt-get install -y wget
+
+    - name: Download files
+      run: |
+        mkdir -p library
+        wget -q https://huggingface.co/madebyollin/sdxl-vae-fp16-fix/resolve/main/sdxl.vae.safetensors -O library/sdxl.vae.safetensors
+        wget -q https://huggingface.co/TheBloke/Llama-2-13B-chat-GGUF/resolve/main/llama-2-13b-chat.Q2_K.gguf -O library/llama-2-13b-chat.Q2_K.gguf
+
+    - name: Commit and push downloaded files
+      run: |
+        git config --global user.name "GitHub Actions"
+        git config --global user.email "actions@github.com"
+        git add library
+        git commit -m "Add downloaded files to library folder" || echo "No changes to commit"
+        git push origin main
